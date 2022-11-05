@@ -18,9 +18,11 @@ public class Car implements CarInterface {
         HashMap<Month, boolean[]> availability = new HashMap<>();
 
         for (Month month: Month.values()) {
-            boolean[] monthAvailability = new boolean[month.getNumberOfDays()]; // creates a new boolean array and its length is from the Enum month
+            // We set the default availability to true for each month, considering that all the cars are initially
+            // available until it is booked and then puts the month and the boolean value to the availability HashMap
+            boolean[] monthAvailability = new boolean[month.getNumberOfDays()];
             Arrays.fill(monthAvailability, true);
-            // puts the month and the boolean value to the availability HashMap
+
             availability.put(month, monthAvailability);
         }
 
@@ -60,6 +62,10 @@ public class Car implements CarInterface {
     @Override
     public int getId() {
         return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     @Override

@@ -4,25 +4,20 @@
  * and open the template in the editor.
  */
 package rentacar;
-
-// This line will give you an error until you create the needed class.
-import ooc.yoursolution.BookingSystem;
-
-import ooc.yoursolution.BookingSystemInterface;
-import ooc.yoursolution.Car;
-import ooc.yoursolution.RentACarInterface;
+import ooc.yoursolution.*;
 import ooc.enums.Make;
 import ooc.enums.Month;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 
 // https://github.com/AmandaTFerraz/RentACar
-
-
 // Amanda de Toledo Ferraz 2021256
 // Laysa Karolliny Dias de Souza 2021295
+
 public class Driver {
 
     /**
@@ -32,17 +27,46 @@ public class Driver {
      */
     public static void main(String[] args) throws IOException {
         // TODO: REMOVE
-        System.out.println("TEST");
 
-        Car car = new Car();
-        Map<Month, boolean[]> availability = car.createAvailability();
-        car.setAvailability(availability);
+        /*Car car1 = new Car();
+        car1.setId(1);
+        car1.setMake(Make.BMW);
+        car1.setRate(100);
+        Map<Month, boolean[]> car1Availability = car1.createAvailability();
+        car1.setAvailability(car1Availability);
 
-        boolean result;
-        result = car.book(Month.JANUARY, 22);
-        System.out.println(result);
-        result = car.book(Month.JANUARY, 22);
-        System.out.println(result);
+        Car car2 = new Car();
+        car2.setId(2);
+        car2.setMake(Make.TOYOTA);
+        car2.setRate(50);
+        Map<Month, boolean[]> car2Availability = car2.createAvailability();
+        car2.setAvailability(car2Availability);
+        car2.book(Month.AUGUST, 15);
+
+        Car car3 = new Car();
+        car3.setId(3);
+        car3.setMake(Make.TOYOTA);
+        car3.setRate(70);
+        Map<Month, boolean[]> car3Availability = car3.createAvailability();
+        car3.setAvailability(car3Availability);
+
+
+        List<CarInterface> carList = new ArrayList<>();
+        carList.add(car1);
+        carList.add(car2);
+        carList.add(car3);
+
+        RentACar rentACar = new RentACar();
+        rentACar.setName("PowerPuff Girls");
+        rentACar.setCars(carList);
+
+        int carId = rentACar.getCarAvailable(Month.AUGUST, 14, Make.TOYOTA, 3);
+        System.out.println("Car ID:" + carId);
+
+        System.out.println("Number of cars: " + rentACar.getCars().size());
+
+        System.out.println("====== END ======");
+*/
 
 
         BookingSystemInterface bookingSystem = new BookingSystem();
