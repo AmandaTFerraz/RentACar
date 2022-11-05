@@ -95,6 +95,5 @@ public interface CarInterface {
      * @return true or false if the booking is completed
      */
     public boolean book(Month month, int day);
-    
-    
+
 }
