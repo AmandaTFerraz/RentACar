@@ -18,9 +18,9 @@ public class Car implements CarInterface {
         HashMap<Month, boolean[]> availability = new HashMap<>();
 
         for (Month month: Month.values()) {
-            boolean[] monthAvailability = new boolean[month.getNumberOfDays()];
+            boolean[] monthAvailability = new boolean[month.getNumberOfDays()]; // creates a new boolean array and its length is from the Enum month
             Arrays.fill(monthAvailability, true);
-
+            // puts the month and the boolean value to the availability HashMap
             availability.put(month, monthAvailability);
         }
 
@@ -49,7 +49,7 @@ public class Car implements CarInterface {
 
     @Override
     public Map<Month, boolean[]> getAvailability() {
-        return null;
+        return availability;
     }
 
     @Override
@@ -76,6 +76,7 @@ public class Car implements CarInterface {
 
         boolean[] monthAvailability = availability.get(month);
         monthAvailability[day] = false;
+
         return true;
     }
 }

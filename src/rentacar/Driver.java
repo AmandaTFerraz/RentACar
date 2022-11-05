@@ -9,19 +9,20 @@ package rentacar;
 import ooc.yoursolution.BookingSystem;
 
 import ooc.yoursolution.BookingSystemInterface;
+import ooc.yoursolution.Car;
 import ooc.yoursolution.RentACarInterface;
 import ooc.enums.Make;
 import ooc.enums.Month;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Map;
 
-// INCLUDE HERE THE LINK TO THE GIT REPOSITORY AS A COMMENT!!!!
+// https://github.com/AmandaTFerraz/RentACar
 
 
-// INCLUDE HERE THE FULL NAME AND STUDENT NUMBER OF BOTH TEAM MEMBERS 
-// AS A COMMENT!!!!
-
+// Amanda de Toledo Ferraz 2021256
+// Laysa Karolliny Dias de Souza 2021295
 public class Driver {
 
     /**
@@ -30,6 +31,19 @@ public class Driver {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        // TODO: REMOVE
+        System.out.println("TEST");
+
+        Car car = new Car();
+        Map<Month, boolean[]> availability = car.createAvailability();
+        car.setAvailability(availability);
+
+        boolean result;
+        result = car.book(Month.JANUARY, 22);
+        System.out.println(result);
+        result = car.book(Month.JANUARY, 22);
+        System.out.println(result);
+
 
         BookingSystemInterface bookingSystem = new BookingSystem();
 
